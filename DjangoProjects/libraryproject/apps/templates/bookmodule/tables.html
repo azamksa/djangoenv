@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Tables</title>
+</head>
+<style>
+table, th, td {
+ border:1px solid black;
+ }
+</style>
+<body>
+    <h1>Example of a Table</h1>
+    <table>
+        <thead>
+
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+            </tr>
+            <tr>
+                <td>Data A</td>
+                <td>Data B</td>
+                <td>Data C</td>
+                <td>data D</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+    <h1></h1>
+    <table>
+        <tr>
+                            <tr>
+                  <th>NEW</th>
+                </tr>
+        </tr>
+    </table>
+</body>
+</html>

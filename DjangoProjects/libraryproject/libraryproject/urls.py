@@ -17,12 +17,17 @@ Including another URLconf
 import DjangoProjects.libraryproject.apps.bookmodule.urls
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
+def home_view(request):
+    return HttpResponse("<h1>Welcome to the Library!</h1>")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.bookmodule.urls')),  # Ensure correct case
     path('books/', include('apps.bookmodule.urls')),  # Correct path to bookmodule URLs
     path('users/', include('apps.usermodule.urls')),
+    path('', home_view, name='home'),
 ]
 
 

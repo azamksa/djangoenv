@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Book List{% endblock title %}
+
+{% block content %}
+<h1>Book List</h1>
+<ul>
+    {% for book in books %}
+        <li>
+            <strong>{{ book.title }}</strong> by {{ book.author }} (ID: {{ book.id }})
+        </li>
+    {% empty %}
+        <li>No books found.</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

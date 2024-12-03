@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html>
 {% load static %}
+<html lang="en">
 <head>
- <title>{% block title %} {% endblock title %}</title>
- <meta name="keywords" content="Books, recent, Learning, library">
- <meta name="description" content="Books website">
- <meta name="author" content="author name">
- <link rel="icon" href="{% static 'qu-icon.png' %}">
- <meta charset="UTF-8">
- <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- include css file -->
- {% block stylesheets %}{% endblock stylesheets %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Library{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block stylesheets %}
+    <!-- Additional styles can be added by child templates -->
+    {% endblock stylesheets %}
 </head>
 <body>
+    <header>
+        <h1>Welcome to My Library</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/books/list_books">Books</a></li>
+                <li><a href="/books/search">Search</a></li>
+                <li><a href="{% url 'books.aboutus' %}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
- {% include "includes/header.html" %}
- {% block content %} {% endblock content %}
- {% include "includes/footer.html" %}
+    <main>
+        {% block content %}
+        <!-- Child template content will be injected here -->
+        <p>This is a placeholder content from base.html. Replace it in child templates.</p>
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <p>© 2024 Library Project</p>
+    </footer>
+
+    {% block scripts %}
+    <!-- Additional scripts can be added by child templates -->
+    {% endblock scripts %}
 </body>
 </html>

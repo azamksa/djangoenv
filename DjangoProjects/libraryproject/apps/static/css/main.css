@@ -1,0 +1,52 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Links */
+.link {
+    display: block;
+    padding: 10px;
+    background-color: #f0f8ff;
+    color: #00008b;
+    text-decoration: none;
+    text-align: center;
+}
+
+.link:hover {
+    background-color: #add8e6;
+    color: #000;
+}
+
+/* Formatting */
+.format-title {
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Lists */
+ul {
+    list-style-type: square;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+table th {
+    background-color: #f2f2f2;
+}

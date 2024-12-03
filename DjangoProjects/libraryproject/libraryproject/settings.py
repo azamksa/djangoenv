@@ -26,7 +26,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "apps" + os.sep + "templates")
 SECRET_KEY = 'django-insecure-oao_59!aue4ft(z+81bn8-s97=k0rp4#(b2=36+tf*g5(_ve^m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bookmodule',
-    'usermodule',
+    'apps.bookmodule',
+    'apps.usermodule',
 
 
 ]
